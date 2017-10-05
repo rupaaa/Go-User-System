@@ -1,20 +1,82 @@
 @bg: #fbfbfb;
+@ff: #fff;
+@dark: #1b2733;
+@border: #f7f9fa;
+@a: #2895F1;
 
 body{
-    background: @bg;
-    font-family: "Trebuchet MS", Tahoma, sans-serif;
+  font-family: 'Open Sans', 'Roboto', Tahoma, arial, sans-serif;
+  background: @bg;
+  font-size: 13px;
+  color: #3d464d;
+  font-weight: normal;
+}
+
+a{
+  text-decoration: none;
+  color: @a;
+  outline: none;
+}
+
+li{
+  list-style: none;
 }
 
 .handy-notify{
-    position: fixed;
-    background: #333;
-    left: 2%;
-    color: white;
+  position: fixed;
+  background: #333;
+  left: 2%;
+  color: @ff;
+  border-radius: 3px;
+  padding: 12px 80px 12px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: left;
+  z-index: 3;
+  top: 105%;
+}
+
+.header_loggedin{
+  background: @ff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  height: 45px;
+  background: @ff;
+  z-index: 2;
+  top: 0px;
+
+  & a{
+    font-size: 14px;
+    color: @dark;
+    margin-left: 7px;
+    padding: 5px 12px;
     border-radius: 3px;
-    padding: 12px 80px 12px 25px;
-    font-size: 15px;
-    cursor: pointer;
-    text-align: left;
-    z-index: 3;
-    top: 105%;
+    display: inline-block;
+
+    &:hover{ background: @border; }
+
+    &:focus{ background: @border; }
+
+  }
+
+  & .left{
+    display: inline-block;
+    position: relative;
+    top: 8px;
+    left: 25px;
+    margin-right: 67%;
+  }
+
+  & .right {
+    display: inline-block;
+    position: relative;
+    top: 8px;
+  }
+
+}
+
+.aligner {
+  position: relative;
+  top: 60px;
 }

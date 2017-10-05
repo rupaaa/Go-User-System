@@ -7,22 +7,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     <link rel="stylesheet" href="/styles/dist/style.css">
 </head>
 <body>
-    
-    <div>
-        <ul>
-            {{ if .UserID }}
-                <li><a href="/">Home</a></li>
-                <li><a href="/profile/{{.UserID}}">Profile</a></li>
-                <li><a href="/logout">Logout</a></li>
-            {{ else }}
-                <li><a href="/welcome">Home</a></li>
-                <li><a href="/register">Register</a></li>
-                <li><a href="/login">Login</a></li>
-            {{ end }}
-        </ul>
+
+    <div class="header_loggedin">
+
+      <div class="left">
+        {{ if .UserID }}
+          <a href="/">Home</a>
+          <a href="/profile/{{.UserID}}">Profile</a>
+          <a href="/logout">Logout</a>
+        {{ else }}
+          <a href="/welcome">Home</a>
+          <a href="/register">Register</a>
+          <a href="/login">Login</a>
+        {{ end }}
+      </div>
+
     </div>
-        
+
 {{ end }}
